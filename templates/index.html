@@ -115,6 +115,7 @@
 		var path = d3.geo.path().projection(transform);
 
 		function updateData(){
+		  	var mapBounds = map.getBounds();
 		  	d3.json("/getData/", function(data) {
 
 				//create placeholder circle geometry and bind it to data
